@@ -2,6 +2,8 @@ const { app, BrowserWindow } = require('electron');
 const path = require('path');
 const url = require('url');
 
+console.log('++++++++++>')
+
 let mianWindow;
 function createWindow() {
   mianWindow = new BrowserWindow({

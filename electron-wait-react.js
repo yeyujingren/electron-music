@@ -1,10 +1,8 @@
 const net = require('net');
 const port = process.env.PORT ? (process.env.PORT - 100) : 3000;
-const TRY_TIMES = 3;
+// const TRY_TIMES = 3;
 
 process.env.ELECTRON_START_URL = `http://localhost:${port}`;
-
-console.log('=====>', port)
 
 const client = new net.Socket();
 
@@ -15,21 +13,19 @@ const tryConnection = () => client.connect({ port: port }, () => {
     console.log('starting electron');
     startedElectron = true;
     const exec = require('child_process').exec;
-
-    console.log('=====>', port, 'hahaha')
     exec('npm run electron');
   }
-}
-);
+});
 
 tryConnection();
 
-let reTryTime = 0;
+// let reTryTime = 0;
 
 client.on('error', (error) => {
-  if (reTryTime < TRY_TIMES) {
-    console.log('try again ...', error);
+  console.log(error)
+  // if (reTryTime < TRY_TIMES) {
+    // console.log('try again ...', error);
     setTimeout(tryConnection, 1000);
-    reTryTime ++;
-  }
+    // reTryTime ++;
+  // }
 });
