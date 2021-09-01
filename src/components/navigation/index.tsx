@@ -1,6 +1,8 @@
 import React from 'react';
 import {useHistory} from 'react-router-dom';
 
+import './style.css';
+
 type NaVProps = {
   [T: string]: string
 }
@@ -12,7 +14,7 @@ const Navigation: React.FC<NaVProps> = (props) => {
     histroy.push(path);
   }
   return (
-    <div>
+    <div className="nav-wapper">
       this is Navigation
       <button
         onClick={() => routeChangeHandler('/')}

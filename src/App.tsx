@@ -1,11 +1,10 @@
 import React from 'react';
 import Routes from './route/index';
-// import Navigation from './components/navigation';
+import './base.css'
 
 function App() {
   return (
     <div className="App">
-      {/* <Navigation /> */}
       {Routes()}
     </div>
   );
