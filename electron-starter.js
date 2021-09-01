@@ -5,8 +5,8 @@ const url = require('url');
 let mianWindow;
 function createWindow() {
   mianWindow = new BrowserWindow({
-    height: 800,
-    width: 800,
+    height: 700,
+    width: 1000,
   });
 
   // 根据不同的环境设置文件指向
@@ -19,7 +19,7 @@ function createWindow() {
 
   // 打开控制台
   // mianWindow.webContents.openDevTools();
-  
+
   mianWindow.on('closed', () => {
     mianWindow = null;
   });
@@ -28,14 +28,12 @@ function createWindow() {
 app.on('ready', createWindow);
 
 app.on('window-all-closed', () => {
-  console.log('2323');
   if (process.platform !== 'darwin') {
     app.quit();
   }
 })
 
 app.on('activate', () => {
-  console.log(111);
   if (mianWindow === null) {
     createWindow();
   }

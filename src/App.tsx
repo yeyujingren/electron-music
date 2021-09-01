@@ -1,9 +1,12 @@
 import React from 'react';
+import Routes from './route/index';
+// import Navigation from './components/navigation';
 
 function App() {
   return (
     <div className="App">
-      electron-music
+      {/* <Navigation /> */}
+      {Routes()}
     </div>
   );
 }
