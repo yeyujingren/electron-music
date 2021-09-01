@@ -1,6 +1,6 @@
 const net = require('net');
 const port = process.env.PORT ? (process.env.PORT - 100) : 3000;
-// const TRY_TIMES = 3;
+const TRY_TIMES = 10;
 
 process.env.ELECTRON_START_URL = `http://localhost:${port}`;
 
@@ -19,13 +19,12 @@ const tryConnection = () => client.connect({ port: port }, () => {
 
 tryConnection();
 
-// let reTryTime = 0;
+let reTryTime = 0;
 
 client.on('error', (error) => {
-  console.log(error)
-  // if (reTryTime < TRY_TIMES) {
-    // console.log('try again ...', error);
+  if (reTryTime < TRY_TIMES) {
+    console.log('try again ...', error);
     setTimeout(tryConnection, 1000);
-    // reTryTime ++;
-  // }
+    reTryTime ++;
+  }
 });

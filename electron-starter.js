@@ -2,8 +2,6 @@ const { app, BrowserWindow } = require('electron');
 const path = require('path');
 const url = require('url');
 
-console.log('++++++++++>')
-
 let mianWindow;
 function createWindow() {
   mianWindow = new BrowserWindow({
@@ -19,7 +17,9 @@ function createWindow() {
   })
   mianWindow.loadURL(startUrl);
 
-  mianWindow.webContents.openDevTools();
+  // 打开控制台
+  // mianWindow.webContents.openDevTools();
+  
   mianWindow.on('closed', () => {
     mianWindow = null;
   });
@@ -28,12 +28,14 @@ function createWindow() {
 app.on('ready', createWindow);
 
 app.on('window-all-closed', () => {
+  console.log('2323');
   if (process.platform !== 'darwin') {
     app.quit();
   }
 })
 
 app.on('activate', () => {
+  console.log(111);
   if (mianWindow === null) {
     createWindow();
   }
