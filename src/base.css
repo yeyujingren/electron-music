@@ -58,7 +58,7 @@ button,
 input,
 select,
 textarea {
-  font: 400 24px/1.5 'Microsoft YaHei', Arial, 'Lucida Grande', Verdana;
+  font: 400 20px/1.5 'Microsoft YaHei', Arial, 'Lucida Grande', Verdana;
   font-style: normal;
 }
 
@@ -165,4 +165,8 @@ textarea:-moz-placeholder {
 input:-ms-input-placeholder,
 textarea:-ms-input-placeholder {
   color: #cdcdcd;
+}
+
+.App {
+  display: flex;
 }

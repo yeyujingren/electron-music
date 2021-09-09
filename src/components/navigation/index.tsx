@@ -1,7 +1,11 @@
 import React from 'react';
 import {useHistory} from 'react-router-dom';
+import Persion from './components/Persion/index';
 
 import './style.css';
+
+// MOCK
+import photo from '../../mock/photo.jpg';
 
 type NaVProps = {
   [T: string]: string
@@ -15,7 +19,10 @@ const Navigation: React.FC<NaVProps> = (props) => {
   }
   return (
     <div className="nav-wapper">
-      this is Navigation
+      <Persion
+        avatar={photo}
+        name="夜雨惊人"
+      />
       <button
         onClick={() => routeChangeHandler('/')}
       >
