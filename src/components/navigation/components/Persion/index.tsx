@@ -1,5 +1,5 @@
 import React from "react";
-import './style.css'
+import './style.less'
 
 type PersionProps = {
   avatar: string,
@@ -9,7 +9,7 @@ type PersionProps = {
 const Persion: React.FC<PersionProps> = (props) => {
   return (
     <div className="persion-wapper">
-      <img src={props.avatar} alt="" />
+      <img src={props.avatar} alt="avatar" />
       <span>
         {props.name}
       </span>
