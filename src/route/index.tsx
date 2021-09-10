@@ -6,9 +6,9 @@ import {
   RouteProps
 } from 'react-router-dom';
 
-import Home from '../components/home';
-import Detail from '../components/detail';
-import Navigation from '../components/navigation';
+import Home from '../pages/home';
+import Detail from '../pages/detail';
+import Navigation from '../pages/navigation';
 
 
 

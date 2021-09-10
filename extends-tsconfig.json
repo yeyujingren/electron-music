@@ -1,9 +1,12 @@
 {
   "compilerOptions": {
     "baseUrl": "./",
-    "path": {
+    "paths": {
       "@mock/*": [
         "src/mock/*"
+      ],
+      "@/*": [
+        "src/*"
       ]
     }
   }

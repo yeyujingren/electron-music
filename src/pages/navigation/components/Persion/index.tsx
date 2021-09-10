@@ -1,4 +1,5 @@
 import React from "react";
+import {CaretRightOutlined} from '@ant-design/icons'
 import './style.less'
 
 type PersionProps = {
@@ -12,6 +13,7 @@ const Persion: React.FC<PersionProps> = (props) => {
       <img src={props.avatar} alt="avatar" />
       <span>
         {props.name}
+        <CaretRightOutlined className="icon"/>
       </span>
     </div>
   )

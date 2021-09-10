@@ -2,7 +2,7 @@ import React from 'react';
 import {useHistory} from 'react-router-dom';
 import Persion from './components/Persion/index';
 
-import './style.css';
+import './style.less';
 
 // MOCK
 import photo from '../../mock/photo.jpg';
