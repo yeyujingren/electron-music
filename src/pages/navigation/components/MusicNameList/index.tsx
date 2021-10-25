@@ -1,4 +1,5 @@
 import React from "react";
+import { useHistory } from "react-router";
 import { List } from 'antd';
 import { CaretDownOutlined, PlusOutlined } from '@ant-design/icons';
 import FontIcon from '../../../../components/FontIcon';
@@ -12,6 +13,12 @@ type ListProps = {
 }
 
 const MusicList: React.FC<ListProps> = (props) => {
+  const histroy = useHistory();
+
+  const routeChangeHandler = (path: string) => {
+    histroy.push(path);
+  }
+
   return (
     <div className="list-wapper">
       <header>
@@ -25,6 +32,7 @@ const MusicList: React.FC<ListProps> = (props) => {
         dataSource={props.name}
         renderItem={item => (
           <List.Item
+            onClick={() => routeChangeHandler(`/detail?name=${item}`)}
             className="item-wrapper"
           >
             <FontIcon type="icon-musicmenu" className="icon"/>
