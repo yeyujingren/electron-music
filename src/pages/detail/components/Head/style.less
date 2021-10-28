@@ -1,0 +1,62 @@
+@import url('../../../../varable.less');
+.music-header_wrap {
+  padding: 10px 0  0 20px;
+  display: flex;
+  font-size: 12px;
+  span {
+    margin-right: 10px;
+  }
+  img {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+  }
+  .music-header_right {
+    margin-left: 20px;
+    .music-header_line {
+      margin-bottom: 5px;
+      display: flex;
+      align-items: center;
+      &.play_line {
+        margin: 20px 0 20px 0;
+      }
+      .music-header_line_type {
+        font-size: 10px;
+        font-weight: 500;
+        height: 14px;
+        display: inline-block;
+        padding: 0 5px;
+        border-radius: 2px;
+        border: 1px solid @theme-color;
+        color: @theme-color;
+      }
+      .music-header_line_name {
+        margin-left: 10px;
+        display: inline-block;
+        font-size: 21px;
+        font-weight: 700;
+      }
+      .music-header_line_btn {
+        display: inline-block;
+        cursor: pointer;
+        margin-right: 10px;
+        font-size: 12px;
+        height: 26px;
+        padding: 0 15px;
+        line-height: 26px;
+        border: 1px solid #ccc;
+        border-radius:15px;
+        .icon {
+          margin-right: 5px;
+          font-size: 15px;
+        }
+        &:first {
+          background-color: @theme-color;
+        }
+        &:hover {
+          background-color: rgba(0, 0, 0, 0.1);
+        }
+      }
+    }
+  }
+}
